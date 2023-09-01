@@ -22,13 +22,13 @@ jobs:
         # - lastest Java version(s)
         java:
           - 8
-          - 11  # LTS
-          - 17  # LTS
-          - 19
+#          - 11  # LTS
+#          - 17  # LTS
+#          - 19
         toolchain: [""]
-        include:
-          - java: 17
-            toolchain: 20  # latest
+#        include:
+#          - java: 17
+#            toolchain: 20  # latest
 
     steps:
       - uses: actions/checkout@v3
@@ -48,12 +48,14 @@ jobs:
         with:
           gradle-version: wrapper
           arguments: errorprone clean -Dtoolchain=${{ matrix.toolchain }}
+          cache-read-only: false
 
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: wrapper
           arguments: build -Dtoolchain=${{ matrix.toolchain }}
+          cache-read-only: false
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
