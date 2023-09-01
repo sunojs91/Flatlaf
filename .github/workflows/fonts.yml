@@ -25,9 +25,9 @@ jobs:
                     - roboto-mono
 
         runs-on: ubuntu-latest
-        if: |
-            github.event_name == 'push' &&
-            github.repository == 'JFormDesigner/FlatLaf'
+#        if: |
+#            github.event_name == 'push' &&
+#            github.repository == 'JFormDesigner/FlatLaf'
         if: false
 
         steps:

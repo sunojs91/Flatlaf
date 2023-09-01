@@ -271,3 +271,4 @@ Applications using FlatLaf
 - [Android Tool](https://github.com/fast-geek/Android-Tool) - makes popular adb
   and fastboot commands easier to use
 - and more...
+
