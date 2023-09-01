@@ -22,13 +22,13 @@ jobs:
         # - lastest Java version(s)
         java:
           - 8
-#          - 11  # LTS
-#          - 17  # LTS
-#          - 19
+          - 11  # LTS
+          - 17  # LTS
+          - 19
         toolchain: [""]
-#        include:
-#          - java: 17
-#            toolchain: 20  # latest
+        include:
+          - java: 17
+            toolchain: 20  # latest
 
     steps:
       - uses: actions/checkout@v3
